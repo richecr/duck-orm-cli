@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "duck-orm-cli"
+version = "0.1.0"
+description = "DuckORM CLI is a database migration tool for usage with the DuckORM."
+authors = ["Rich Ramalho <richelton14@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "duck_orm_cli"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = "^0.9.0"
+duck-orm = {path = "duck_orm-1.0.2-py3-none-any.whl"}
+aiosqlite = "^0.19.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+duck-orm-cli = "duck_orm_cli.cli.main:app"

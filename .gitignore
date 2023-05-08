@@ -1,0 +1,12 @@
+example.db
+duck_orm-1.0.2-py3-none-any.whl
+__pycache__/
+/Main.py
+.coverage
+.env
+data
+/migrations
+/seeds
+duckorm_file.py
+/htmlcov
+/dist
