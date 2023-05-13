@@ -3,15 +3,61 @@ name = "duck-orm-cli"
 version = "0.1.0"
 description = "DuckORM CLI is a database migration tool for usage with the DuckORM."
 authors = ["Rich Ramalho <richelton14@gmail.com>"]
-license = "MIT"
 readme = "README.md"
+license = "LICENSE"
 packages = [{include = "duck_orm_cli"}]
+keywords = [
+    "cli",
+    "orm",
+    "async",
+    "aiohttp",
+    "asyncio",
+    "databases",
+    "database",
+    "postgres",
+    "sqlite"
+]
+classifiers = [
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python",
+    "Topic :: Internet",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development",
+    "Typing :: Typed",
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+[project.urls]
+Homepage = "https://github.com/richecr/duck-orm-cli"
+Documentation = "https://richecr.github.io/duck-orm/"
 
 [tool.poetry.dependencies]
 python = "^3.10"
 typer = "^0.9.0"
-duck-orm = {path = "duck_orm-1.0.2-py3-none-any.whl"}
 aiosqlite = "^0.19.0"
+duck-orm = "^1.0.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+pytest-cov = "^4.0.0"
+pytest-asyncio = "^0.21.0"
 
 [build-system]
 requires = ["poetry-core"]

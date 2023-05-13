@@ -132,25 +132,20 @@ def create_seed(name: str):
         log_error("Invalid characters. Type: create_users and not create-users.")
     else:
         time_ms = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S%f")
-        filename = f"{name}-{str(time_ms)}"
-        code = """from duck_orm import duck_orm
+        filename = f"{str(time_ms)}_{name}"
+        code = """from duck_orm.model_manager import ModelManager
 from duck_orm.sql.condition import Condition
 
 
-def up():
-    return duck_orm.insert('users', [
-        {
-            'id': 1,
-            'name': 'User 1',
-            'email': 'user1@gmail.com'
-        }
-    ])
+def up(model_manager: ModelManager):
+    return model_manager.insert(
+        "users", [{"id": 1, "name": "User 1", "email": "user1@gmail.com"}]
+    )
 
 
-def down():
-    return duck_orm.remove('users', conditions=[
-            Condition('id', '=', 1)
-        ])
+def down(model_manager: ModelManager):
+    return model_manager.remove("users", conditions=[Condition("id", "=", 1)])
+
 """
         with open(f"./seeds/{filename}.py", "w") as file:
             file.writelines(code)
