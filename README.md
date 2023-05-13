@@ -4,7 +4,29 @@ DuckORM CLI is a database migration tool for usage with the [DuckORM](https://gi
 
 **Requirements**: Python 3.10+
 
-**Duck-ORM is still under development**.
+**Duck-ORM-CLI is still in the early stages of development, production use is not recommended**.
+
+## Technology and Resources
+
+- [Python 3.10](https://www.python.org/downloads/release/python-3107/)
+- [Poetry](https://python-poetry.org/)
+- [Typer](https://typer.tiangolo.com/)
+- [Docker](https://www.docker.com/)
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Quickstart](#quickstart)
+- [Quickstart](#quickstart)
+    - [Commands](#commands)
+        - [init](#init)
+        - [create-migrate](#create-migrate)
+        - [create-seed](#create-seed)
+        - [run-migrations](#run-migrations)
+        - [undo-migrations-all](#undo-migrations-all)
+        - [create-seed](#create-seed)
+- [Author](#author)
+- [License](#license)
 
 ## Installation
 
